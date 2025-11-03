@@ -1,0 +1,55 @@
+.gallery {
+    width: 100%;
+    display: block;
+
+    text-align: center;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.gallery a:link, .gallery-wrapper a:visited {
+    color: rgba(0,0,0,0) /* Hide */
+}
+
+.gallery a {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 5px solid #0abdc6;
+    border-radius: 65px;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    position: relative;
+}
+
+.gallery a .title {
+    visibility: hidden;
+    width: 250px;
+    background-color: black;
+    opacity: 0.7;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+}
+
+.gallery a:hover img {opacity: 1;}
+.gallery a:hover .title {visibility: visible;}
+
+

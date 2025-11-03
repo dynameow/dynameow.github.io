@@ -1,0 +1,249 @@
+/* ==================
+   FONTS
+   ================== */
+@font-face {
+    font-family: 'meyrinregular';
+    src: url('../resources/fonts/meyrin-webfont.woff2') format('woff2'),
+         url('../resources/fonts/meyrin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '0xa000-monochrome';
+    src: url('../resources/fonts/0xa000-monochrome-webfont.woff2') format('woff2'),
+         url('../resources/fonts/0xa000-monochrome-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'test';
+    src: url('../resources/fonts/terminal-grotesque-webfont.woff2') format('woff2');
+    size-adjust: 130%;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url("../images/resources/pxArt.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+/* ==================
+   NAVBAR
+   ================== */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Has to be set to prevent getting blocked by main */
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   /* background: rgba(0 , 0, 0, .8); */
+    background-image: url("../images/resources/navbg.jpg");
+    background-size: 100%;
+    opacity: 0.8;
+    width: 100%;
+
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: #0abdc6;
+    text-align: center;
+    padding: 5px 16px 5px 16px;
+    text-decoration: none;
+    font-family: 'meyrinregular';
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+nav .active {
+    color: #ea00d9;
+}
+
+@media only screen and (max-width: 850px) { /* Centered  */
+    nav li {margin: 0 auto;
+            width: 25%;}
+    }
+@media only screen and (max-width: 500px) { /* Vertical for mobile devices */
+        nav li {float: none;}
+        nav {position: static;}
+    }
+
+/* ==================
+   HEADER
+   ================== */
+
+header {
+    display:  table;
+    background-color: #091833;
+    margin: 20px auto;
+    padding: 20px 80px;
+    overflow: hidden;
+    border: 4px solid #133e7c;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header span {
+    white-space: pre;
+    display: inline-block;
+    margin: auto;
+    font: bold 15px monospace;
+    color: white;
+    text-shadow: 8px 5px 4px #ea00d9;
+    text-align: left;
+}
+
+header .word {
+    display: inline-block;
+}
+
+header #letter1 {margin-right: -40px;}
+header #letter2 {margin-right: -15px;}
+
+@media only screen and (max-width: 640px) {
+    #rest {display: none;}
+    header {padding-left: 120px;
+            padding-right: 120px;}
+}
+
+header h1 {
+    color: white;
+    font: bold 3vmax meyrinregular;
+    margin: auto;
+}
+/* ==================
+   MAIN
+   ================== */
+
+main {
+    background-color: black;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+    display: table;
+    box-sizing: padding-box;
+    padding-top: 20px;
+    border-top: 4px solid #133e7c;
+    border-bottom: 4px solid #133e7c;
+    border-radius: 10px;
+    opacity: 0.97;
+
+}
+
+.post {
+    padding-bottom: 100px;
+}
+g
+.post-header {
+    width: 100%;
+    height: auto;
+}
+
+.post-header h1 {
+    font-size: 60;
+    color: #711c91;
+    margin: 15;
+    font-family: "0xa000-monochrome";
+    font-weight: normal;
+}
+
+.post-content {
+    border: 3px solid #711c91;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: "test";
+    font-weight: normal;
+    font-style: normal;
+}
+
+.post-content iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+
+.readmore {
+    display: block;
+    border: 2px solid #F2CD5D;
+    border-radius: 2px;
+    padding: 10px;
+    text-align: center;
+    background: black;
+}
+
+/* ==================
+   FOOTER
+   ================== */
+footer {
+    display: table;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: black;
+    border: 4px solid #133e7c;
+    border-radius: 10px;
+    padding: 2% 20%;
+    color: white;
+    vertical-align: middle;
+}
+
+footer .icons {
+    display: inline-block;
+    text-align: center;
+    margin-right: 25px;
+}
+
+footer svg {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #711c91;
+    border-radius: 5px;
+    padding: 10;
+    margin: 0;
+    vertical-align: middle;
+}
+
+footer .icons svg:hover {
+}
+
+footer span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer a:link, a:visited {
+    fill: #0abdc6;
+}
+
+footer .icons svg:hover {
+    fill: #067379;
+    border-color:  #54146b;
+}
+
+@media only screen and (max-width: 850px) {
+    footer .icons {margin-right: 0;
+                   margin-bottom: 10px;}
+    footer {text-align: center;}
+}
